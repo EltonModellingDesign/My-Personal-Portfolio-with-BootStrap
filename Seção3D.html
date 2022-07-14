@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body{
+            position: relative;
+            box-sizing:border-box;
+        }
+        .containerSlide{position: relative;min-height: 600px;}
+
+        .Visualize{
+            display: flex;
+            justify-content: baseline;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            position:absolute;
+            align-self: center;
+            margin: 10px;
+            height: 850px;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.753);
+            border: solid 1px white;
+            border-radius: 5px;
+            z-index: 100;
+            page-break-inside: avoid;
+        
+        }
+
+
+        .noVisualize{
+            display: none;
+
+        }
+
+        .overflow{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-content: center;
+            height: auto;
+            width: 95%;
+            background-color: black;
+            overflow:auto;
+            border: solid 5px black;
+            float: left;
+
+        }
+        .img-overflow{
+            margin: 5px;
+            height: auto;
+            width: 100%;
+            align-items: center;
+
+        }
+
+        .videoYou{          
+            height: 780px;
+            width: 1280px;
+        }
+
+        .cursor{
+            cursor: pointer;
+        }
+
+        @media (max-width:1300px) {
+            .videoYou{height: 390px;width: 640px;}
+        }
+
+
+        @media (max-width:1100px) {
+            body{background-size:auto;background-position-y: -350px;}
+        }
+        @media (max-width:600px) {
+            #hide{display: none;}
+            body{background-size:auto;background-position-y: -100px;}
+            .checkbox:checked ~ .checkboxVisualize{margin-top: 300px;position: absolute;}
+            .Visualize{position: absolute;height: auto;transform: translateY(0);}
+            .overflow{height: 1600px;}
+            .videoYou{height: auto;width: auto;}
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-end align-items-end" id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient rounded-start my-3">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="./Index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="./Index.html#Habilidades">Habilidades</a></li>
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="./Index.html#contato">Contato</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="container-fluid my-5 bg-dark bg-gradient" id="portfolio">
+            <nav class="btn btn-group mx-5 flex-wrap">
+                <button class="btn btn-dark"><a href="SeçãoProgramação.html" class="text-decoration-none text-white">Programação FrontEnd</a></button>
+                <button class="btn btn-dark active"><a href="Seção3D.html" class="text-decoration-none text-white">3D</a></button>
+                <button class="btn btn-dark"><a href="SeçãoDesign.html" class="text-decoration-none text-white">Design</a></button>
+            </nav>
+            <div class="containerSlide d-flex flex-row justify-content-center flex-wrap">
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Modelagem de Veículos</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Modelagem de Veiculos/Carro super final.jpg" alt="Chevrolet" height="100px">
+                    <span ><b>Feitos com:</b> Blender / Substance Painter / Photoshop</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonVehicule">Visualizar</span>                 
+                </div>
+                <div class="noVisualize" id="slideVehicule">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonVehicule">Voltar</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/2568913/b932619e78/vintage-classic-car-chevrolet-impala-1967-pbr-more-bonus-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Chevrolet 1967">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/2568913/4622960e62/vintage-classic-car-chevrolet-impala-1967-pbr-more-bonus-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Chevrolet Indoors">
+                            <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/793/large/elton-alves-carro-00-final-2.jpg?1550958604" alt="Wacky Races 0">
+                            <img class="img-overflow" src="https://img-new.cgtrader.com/items/2755887/b1b996d2d1/race-car-01-stone-car-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Wacky Races 1">
+                            <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/810/large/elton-alves-48363510-2600167416690211-6287055664271327232-o.jpg?1550958713" alt="Wacky Races 2">
+                            <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/827/large/elton-alves-48361276-2600167383356881-4004170582399647744-o.jpg?1550958826" alt="Wacky Races 3">
+                            <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/836/large/elton-alves-carro-voador-final-2.jpg?1550958893" alt="Wacky Races 4">
+                            <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/845/large/elton-alves-carro-5-final-r.jpg?1550958947" alt="Wacky Races 5">
+                            <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/994/large/elton-alves-carro-6-final-r.jpg?1550959817" alt="Wacky Races 6">
+                            <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/001/large/elton-alves-carro-7-final.jpg?1550959878" alt="Wacky Races 7">
+                            <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/003/large/elton-alves-carro-a-vapor-final-2.jpg?1550959905" alt="Wacky Races 8">
+                            <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/012/large/elton-alves-carro-veloz-final.jpg?1550959937" alt="Wacky Races 9">
+                            <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/014/large/elton-alves-carro-madeira-final.jpg?1550959960" alt="Wacky Races 10">
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonVehicule">Voltar</span>                      
+                </div>
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                    <span class="text-center">Personagens Cartoon em 3D</span>
+                    <img class="img-fluid" src="https://img2.cgtrader.com/items/2706775/0898bc39a5/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis" height="100px">
+                    <span ><b>Feitos com:</b> Blender / Substance Painter / Photoshop / Zbrush</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonCharacterC">Visualizar</span>                
+                </div> 
+                <div class="noVisualize" id="slideCharacterC">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonCharacterC">Voltar</span>
+                    <figure class="overflow">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2706775/ed2db48fb6/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2706775/0898bc39a5/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis"> 
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/3098347/db6be6e890/alucard-from-hellsing-anime-3d-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Alucard">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/3098347/90261ddcce/alucard-from-hellsing-anime-3d-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Alucard">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/3054299/a7f1be3e0e/black-rock-shooter-anime-character-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Black Rock Shooter">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/3054299/5088c14658/black-rock-shooter-anime-character-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Black Rock Shooter">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/3111273/f5bcd5c363/akame-ga-kill-with-basic-rigged-3d-model-low-poly-animated-rigged-max-obj-3ds-fbx-stl-blend.jpg" alt="Akame">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/3111273/8b3b1b3ad0/akame-ga-kill-with-basic-rigged-3d-model-low-poly-animated-rigged-max-obj-3ds-fbx-stl-blend.jpg" alt="Akame">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/3002808/6e8564cfec/painwheel-from-skullgirls-pbr-and-rigged-3d-model-low-poly-rigged-max-obj-fbx-stl-blend.jpg" alt="PainWheel">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/3002808/4791036637/painwheel-from-skullgirls-pbr-and-rigged-3d-model-low-poly-rigged-max-obj-fbx-stl-blend-dae.jpg" alt="PainWheel">                                                    
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonCharacterC">Voltar</span>                      
+                </div> 
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                    <span class="text-center">Montagem de Cenas 3D</span>
+                    <img class="img-fluid" src="https://cdna.artstation.com/p/assets/images/images/016/118/738/large/elton-alves-mar-image-final.jpg?1550968702" alt="View" height="100px">
+                    <span ><b>Feitos com:</b> Blender / Photoshop / Illustrator</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonCena">Visualizar</span>                
+                </div>
+                <div class="noVisualize" id="slideCena">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonCena">Voltar</span>
+                    <figure class="overflow">
+                        <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/118/738/large/elton-alves-mar-image-final.jpg?1550968702" alt="View">
+                        <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/118/739/large/elton-alves-torneira-rampa-preto.jpg?1550968714" alt="Tap">
+                        <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/282/large/elton-alves-paisagem-final.jpg?1550961251" alt="Child Drawn in Reality">
+                        <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/973/large/elton-alves-robo-render-6.jpg?1550964929" alt="Robot protecting">
+                        <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/734/large/elton-alves-35050557-2222701727770117-6348722886311673856-o.jpg?1550963498" alt="Phantom in Corridor">
+                        <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/118/362/large/elton-alves-robo-espartano-final.jpg?1550966683" alt="Robot Spartan">
+                        <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/535/large/elton-alves-35728732-2239323122774644-616178771610828800-n.jpg?1550962494" alt="Ripper">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2706775/f1a9c0d1ac/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis">                           
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonCena">Voltar</span>                      
+                </div>
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                    <span class="text-center">Assets 3D para Games</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Chest 1080p.jpg" alt="Chest" height="100px">
+                    <span ><b>Feitos com:</b> Blender / Substance Painter</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonAsset">Visualizar</span>                 
+                </div>
+                <div class="noVisualize" id="slideAsset">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonAsset">Voltar</span>
+                    <figure class="overflow">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2429555/843cc29180/simple-treasure-chest-4k-pbr-low-poly-game-ready-vr-ar-3d-model-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg" alt="Chest">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/2429555/d0b0c17b51/simple-treasure-chest-4k-pbr-low-poly-game-ready-vr-ar-3d-model-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg" alt="Chest">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2498377/dba849aa75/futuristic-sci-fi-flag-standard-many-pbr-options-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Standart">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/2498377/3db7cbfd93/futuristic-sci-fi-flag-standard-many-pbr-options-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Standart">  
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2473511/80eaa0e53d/modern-toilet-paper-holder-pbr-rusty-and-old-subdivision-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Toilet Paper"> 
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2473549/7f26255cbd/simple-toilet-paper-holder-pbr-rusty-and-oldsteel-subdivision-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Toilet Paper">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2568792/be12143f7c/classic-car-seat-many-leather-pbr-options-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Car Seat"> 
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2560638/ffc4442e3a/classic-car-back-seat-many-leather-pbr-options-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Car Seat">  
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2446500/ba2a0b8d4c/dirty-bathtub-many-options-pack-bpr-subdivision-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Bath">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2446630/e65ebd9405/3d-dirty-vintage-simple-toilet-seat-with-subdivision-crease-pbr-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Bath">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2419915/0d8ad05728/classic-tire-4k-pbr-low-poly-and-high-poly-game-ready-vr-ar-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Tire">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2474914/2dec68242a/wall-mirror-kit-with-crack-and-pbr-textures-options-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Mirrors">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/2474880/7acece4ac9/trash-can-kit-with-many-bpr-dirty-and-rusty-options-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Trash Cans">                                             
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonAsset">Voltar</span>                      
+                </div>
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                    <span class="text-center">Móveis e Utensilios em 3D</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Chair 1080p.jpg" alt="Chest" height="100px">
+                    <span ><b>Feitos com:</b> Blender / 3DS Max / Substance Painter</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonMoveis">Visualizar</span>               
+                </div>
+                <div class="noVisualize" id="slideMoveis">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonMoveis">Voltar</span>
+                    <figure class="overflow">
+                        <img class="img-overflow" src="https://d1231c29xbpffx.cloudfront.net/store/productimage/243406/image/b6f1bbaa95bbc0b5e88705c61bcbe2df.jpg?Expires=1656628142&Signature=X0314BvRMjyFUnUY6~3ptoLn3nugBEQNgDttiSqriyOPGDG4xKCYQ17ncEn8W5puE4kn~TmPT2E8NjWHlGlMBYdUf6~M2wHcUN4tdeSqtYJBmdyQkL3tIPbJNGxwGgVAuOgCZvurknBAKM2hcOIyS~4HoGIVEGbiMEeWIXoV2L0mea5eOB4-4WF2VQh4Cm~VYcaDH284nYGibTY2gjI8Sou5Qy9Ua-VGBbw-eL4w3TzgjoLqrlaNZtEZT6xehwDUVL8exEBn8Mkmw3CY~BeoTjYi9r4snGcnW9hZu6g7Vtli3PYQWoftjRJ7JDt2FEZlrm3bj1DPh7Tx9To0~cOJJw__&Key-Pair-Id=APKAIN6COYBF3ZQW7OQQ" alt="Chair"> 
+                        <img class="img-overflow" src="https://d1231c29xbpffx.cloudfront.net/store/product/171507/image/4d57adb0e1c0ce8d6d3c76dc5b819835.jpg?Expires=1656628142&Signature=a-VudfWOXITIVApzeqDmc01rxrveya2Hcw6o8sjjjuvDmHCp2XK87ao1I8xM6xN6X6DhwHs6XlWtbYzAwtDJjXqYA60V9insA9rKppdfZVcHcEcOqDGDQ8eQhJ2z8pfBM2dLMIf6oIx6qfpXwbabRFL7LQP41JCqurBxIh-n0ozDulT4z1ga1Cr8MTpLyLq40IDLfzqwEvqH82-v9GOvkRsQhDaHKerYocdJbd-N99oqR-BpkhGy1--cbIy3CnmoxYvKlQS9ezBx-NiEE319gasIoieeTJgPGUnW5yaSsgf0E9nJ-PZyS1qCwUcpmbDr3a5Y85JH4N6-py~zDqLTdA__&Key-Pair-Id=APKAIN6COYBF3ZQW7OQQ" alt="Chair">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2507200/b11533e9e5/ping-pong-table-tennis-more-rackets-paddles-pbr-options-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="PingPong"> 
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2539391/1c9539ce86/door-with-small-window-many-pbr-options-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Door"> 
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/2517628/e821d22350/kit-light-fixtures-for-large-places-pbr-option-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Light Fixtures">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2528921/f8766dec7f/large-bench-pew-many-pbr-optios-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Bench">
+                        <img class="img-overflow" src="https://img1.cgtrader.com/items/2528991/024de3d780/large-oldy-holy-rectangle-table-with-tablecloth-pbr-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Table">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2486901/1e6ce15315/vintage-chair-for-recreation-or-leisure-places-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Laisure Chair">
+                        <img class="img-overflow" src="https://img-new.cgtrader.com/items/2682739/26c1962611/telescope-for-view-3d-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Telescopio">
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2676889/02fdf6fff6/simple-door-vault-3d-model-max-obj-fbx-stl-blend.jpg" alt="Vault"> 
+                        <img class="img-overflow" src="https://img2.cgtrader.com/items/2559938/858c36a5e2/tire-low-poly-more-bonus-pbr-option-textures-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Tire">                                           
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonMoveis">Voltar</span>                      
+                </div> 
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                    <span class="text-center">Animações 3D</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Animation 3D.jpg" alt="View" height="100px">
+                    <span ><b>Feitos com:</b> Blender | Adobe Premier | Windows Editor</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonAnimation">Visualizar</span>                
+                </div>
+                <div class="noVisualize" id="slideAnimations">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonAnimation">Voltar</span>
+                    <figure class="overflow">
+                        <iframe class="videoYou" src="https://www.youtube.com/embed/rUeK6w6wYEY" title="Black Rock Shooter 3D Animation Combo Attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="videoYou" src="https://www.youtube.com/embed/X7V5DiqXayY" title="SkullGirls PainWhell 3D animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="videoYou" src="https://www.youtube.com/embed/eEP1rII4E-Q" title="Akame Ga Kill 3D Animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="videoYou" src="https://www.youtube.com/embed/TjN5UfMDPPc" title="Hellsing Alucard 3D animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="videoYou" src="https://www.youtube.com/embed/21v7qIDaMik" title="Neon Genesis Evangelion EVA - 01 animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonAnimation">Voltar</span>                      
+                </div>                               
+            </div>
+        </section>
+        </main>
+        <footer class="d-flex justify-content-center flex-wrap text-white bg-dark">
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Páginas</H6>
+                <ul>
+                    <li><a href="./Index.html#home" class="text-white">Home</a></li>
+                    <li><a href="./Index.html#Portfolio" class="text-white">Portfolio</a></li>
+                    <li><a href="./Index.html#Habilidades" class="text-white">Habilidades</a></li>
+                    <li><a href="./Index.html#contato" class="text-white">Contato</a></li>
+                </ul>                
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Informações</H6>
+                <p>
+                    Empresa Tom’s Store Solutions<br>
+                    MEI: 33.567.594/0001-76<br>
+                    Cidade São Paulo/SP<br>
+                    Rua Carlos Finlay Cep:03685-060<br>
+                    Bairro: Patriarca<br>
+                </p>
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Support</H6>
+                <p>Whats:<br>(11) 99336-5689</p>
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Selos</H6>
+                <a href="#"><img src="./Conteudo/6.Footer/site protegido.png" alt="site-protegido" height="50px"></a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+        <script src="Slide3D.js"></script>
+</body>
