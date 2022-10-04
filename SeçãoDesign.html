@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body{
+            position: relative;
+            box-sizing:border-box;
+        }
+        .containerSlide{position: relative;min-height: 600px;}
+
+        .Visualize{
+            display: flex;
+            justify-content: baseline;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            position:absolute;
+            align-self: center;
+            margin: 10px;
+            height: 850px;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.753);
+            border: solid 1px white;
+            border-radius: 5px;
+            z-index: 100;
+            page-break-inside: avoid;
+        
+        }
+
+
+        .noVisualize{
+            display: none;
+
+        }
+
+        .overflow{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-content: center;
+            height: auto;
+            width: 95%;
+            background-color: black;
+            overflow:auto;
+            border: solid 5px black;
+            float: left;
+
+        }
+        .img-overflow{
+            margin: 5px;
+            height: auto;
+            width: 100%;
+            align-items: center;
+
+        }
+        .cursor{
+            cursor: pointer;
+        }
+
+
+        @media (max-width:1100px) {
+            body{background-size:auto;background-position-y: -350px;}
+        }
+        @media (max-width:600px) {
+            #hide{display: none;}
+            body{background-size:auto;background-position-y: -100px;}
+            .checkbox:checked ~ .checkboxVisualize{margin-top: 300px;position: absolute;}
+            .Visualize{position: absolute;height: auto;transform: translateY(0);}
+            .overflow{height: 1600px;}
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-end align-items-end" id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient rounded-start my-3">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="./Index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="./Index.html#Habilidades">Skills</a></li>
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="./Index.html#contato">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="container-fluid my-5 bg-dark bg-gradient" id="portfolio">
+            <nav class="btn btn-group mx-5 flex-wrap">
+                <button class="btn btn-dark"><a href="SeçãoProgramação.html" class="text-decoration-none text-white">Programing</a></button>
+                <button class="btn btn-dark"><a href="Seção3D.html" class="text-decoration-none text-white">3D</a></button>
+                <button class="btn btn-dark active"><a href="SeçãoDesign.html" class="text-decoration-none text-white">Design</a></button>
+            </nav>
+            <div class="containerSlide d-flex flex-row justify-content-center flex-wrap">
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Projects de UX Design</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Power Task.png" alt="Web Design Projects" height="100px">
+                    <span ><b>Made with</b> Illustrator</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonUX">Visualize</span>                
+                </div>
+                <div class="noVisualize" id="slideUXDesign">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonUX">Back</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/73a96a143702709.627f0649837e6.png" alt="TaskPoint">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/123c98143702709.627f06498103c.png" alt="TaskPoint2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/809408143702709.627f064980881.png" alt="Comments">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/3aa70d143702709.627f064982f8f.png" alt="Comments2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4db189143702709.627f0649820a4.png" alt="Quiz da Fortuna">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d01f74143702709.627f064984070.png" alt="Quiz da Fortuna2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/302e2a143702709.627f064981949.png" alt="Quiz da Fortuna3">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/7cc61e143702709.627f064982722.png" alt="Power Comments">                    
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonUX">Back</span>                      
+                </div> 
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Projects of Web Design</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Coral Viagens.jpg" alt="Web Design Projects" height="100px">
+                    <span ><b>Made with</b> Illustrator</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonWD">Visualize</span>                 
+                </div>
+                <div class="noVisualize" id="slideWD">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonWD">Back</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/a11e86143633981.627dcf6b2ff54.jpg" alt="Coral Viagens">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/9bb54f143633981.627dcf6b34513.jpg" alt="Futura Tec">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e1a7a4143633981.627dcf6b3249d.jpg" alt="4Chair">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/51f5cc143633981.627dcf6b2f239.jpg" alt="Tom's Store">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/1831a2143633981.627dcf6b330a2.jpg" alt="Pet Show 1">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d324f5143633981.627dcf6b367ee.jpg" alt="Pet Show 2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8afe69143633981.627dcf6b3183b.jpg" alt="Facul Beer">                    
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonWD">Back</span>                      
+                </div>
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Design of Brand and Logo</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/Design/Logo 1080p.jpg" alt="LogoHouse" height="100px">
+                    <span ><b>Made with</b> Illustrator / Blender</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonLogo">Visualize</span>                
+                </div>
+                <div class="noVisualize" id="slideLogo">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonLogo">Back</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48a58f143632263.627dc49783430.jpg" alt="House">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0c179c143632263.627dc49783dcb.jpg" alt="House2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/b514ef143632263.627dc497821cc.jpg" alt="House3">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e84b5b143633119.627dc9fbc3e90.jpg" alt="Smaller">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/edb130143633119.627dc9fbc4a54.png" alt="Smaller2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3c0d27143633119.627dc9fbc50d3.jpg" alt="Smaller3">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/2b7d5f101297083.5f1b51f70c958.png" alt="Tom's Store">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/b0dd2f101297083.5f1b51f70d324.jpg" alt="Tom's Store2">                    
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonLogo">Back</span>                      
+                </div> 
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Posts for Social Media</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/Design/Posts 1080p.jpg" alt="Post" height="100px">
+                    <span ><b>Made with</b> Photoshop</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonPost">Visualize</span>                
+                </div>
+                <div class="noVisualize" id="slidePost">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonPost">Back</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ee9c02101298203.5f1b592c4c4af.png" alt="RobotPost">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/df8c2b101294351.5f1b430e4cdc6.jpg" alt="Maquina de Cartão venda">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/a831d4101298519.62eaccde35627.jpg" alt="Propaganda Face page">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8c5199101295615.5f1b49c37ace4.png" alt="Post Insta">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3cf08f101298519.5f1b5b3924e60.jpg" alt="Post Insta2">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9add7a101298519.5f1b5b3925912.jpg" alt="Post Insta3">                  
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonPost">Back</span>                      
+                </div> 
+                <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                    <span class="text-center">Edition and Build of Imagens</span>
+                    <img class="img-fluid" src="./Conteudo/2.Portfolio/Design/Edition 1080p.jpg" alt="Edição" height="100px">
+                    <span ><b>Made with</b> Photoshop</span>
+                    <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonEdit">Visualize</span>                
+                </div>
+                <div class="noVisualize" id="slideEdit">
+                    <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonEdit">Back</span>
+                    <figure class="overflow">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/bc4e12101295025.5f1b46de12864.jpg" alt="ClockHat">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5f244b101295025.5f1b46de11802.jpg" alt="Clock">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/565fa0101295025.5f1b46de13cd2.jpg" alt="Wacth1">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e0b53a101295025.5f1b46de12048.png" alt="Watches">
+                            <img class="img-overflow" src="./Conteudo/2.Portfolio/Design/Mouse preto recortes menor.jpg" alt="Mouse">
+                            <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/397362101296549.5f1b4ede3e47d.jpg" alt="Rings">                  
+                    </figure>  
+                    <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonEdit">Back</span>                      
+                </div> 
+            </div>
+        </section>
+    </main>
+        <footer class="d-flex justify-content-center flex-wrap text-white bg-dark">
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Pages</H6>
+                <ul>
+                    <li><a href="./Index.html#home" class="text-white">Home</a></li>
+                    <li><a href="./Index.html#Portfolio" class="text-white">Portfolio</a></li>
+                    <li><a href="./Index.html#Habilidades" class="text-white">Skills</a></li>
+                    <li><a href="./Index.html#contato" class="text-white">Contact</a></li>
+                </ul>                
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Informations</H6>
+                <p>
+                    Empresa Tom’s Store Solutions<br>
+                    MEI: 33.567.594/0001-76<br>
+                    Cidade São Paulo/SP<br>
+                    Rua Carlos Finlay Cep:03685-060<br>
+                    Bairro: Patriarca<br>
+                </p>
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Support</H6>
+                <p>Whats:<br>(11) 99336-5689</p>
+            </div>
+            <div class="d-flex flex-column align-items-center m-3">
+                <H6>Sealed</H6>
+                <a href="#"><img src="./Conteudo/6.Footer/site protegido.png" alt="site-protegido" height="50px"></a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="SlideDesign.js"></script>
+</body>
