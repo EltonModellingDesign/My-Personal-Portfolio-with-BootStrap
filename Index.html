@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url(./Conteudo/1.Header/Background\ 2.jpg);
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position-y: -100px;
+            position: relative;
+        }
+        .visible{display: inline-block;}
+        .hideItem{display: none;}
+
+        .Visualize{
+            display: flex;
+            justify-content: baseline;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            position:absolute;
+            align-self: center;
+            margin: 10px;
+            height: 850px;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.753);
+            border: solid 1px white;
+            border-radius: 5px;
+            z-index: 100;
+            page-break-inside: avoid;
+        
+        }
+
+
+        .noVisualize{
+            display: none;
+
+        }
+
+
+        .overflow{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-content: center;
+            height: auto;
+            width: 95%;
+            background-color: black;
+            overflow:auto;
+            border: solid 5px black;
+            float: left;
+            background-color: #ffffff00;
+
+        }
+        .img-overflow{
+            margin: 5px;
+            height: auto;
+            width: 100%;
+            align-items: center;
+
+        }
+        .videoYou{          
+            height: 780px;
+            width: 1280px;
+        }
+        .cursor{
+            cursor: pointer;
+        }
+
+        @media (max-width:1300px) {
+            .videoYou{height: 390px;width: 640px;}
+        }
+
+        @media (max-width:1100px) {
+            body{background-size:auto;background-position-y: -350px;}
+        }
+        @media (max-width:600px) {
+            #hideTable{display: none;}
+            body{background-size:auto;background-position-y: -100px;}
+            .Visualize{position: absolute;height: auto;transform: translateY(0);}
+            .overflow{height: 850px;}
+            .videoYou{height: auto;width: auto;}
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-end align-items-end" id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient rounded-start my-3">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="#">Home</a></li>
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="./SeçãoProgramação.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link border-end" aria-current="page" href="#Habilidades">Skills</a></li>
+                  <li class="nav-item"><a class="nav-link" aria-current="page" href="#contato">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="container mx-md-5">
+            <div class="d-flex flex-row align-items-center justify-content-center flex-wrap border border-1 rounded-2 bg-dark bg-gradient bg-opacity-75">
+                <figure class="figure mx-4 my-2">
+                    <img class="figure-img" src="./Conteudo/1.Header/Profile.jpg" alt="Profile" height="250px">
+                </figure>
+                <div class="d-flex flex-column my-3 m-2 fw-bold text-white" style="width: 500px;">
+                    Hello My name is Elton Alves and welcome to my portfolio
+                    where you may visualize and see all my works and get to 
+                    know me better.
+                    <p class="my-2">I'm selftaught and love to look after for new skills and 
+                        knowledge that is a habbit I have as discipline always urged by new 
+                        challenges. Besides I'm a convict person, talent and creative always
+                        loving to create and developed projects from the concept design to
+                        final processes and according to my coleagues and superiors they consider me 
+                        a focused person, dedicate and always avaible to help.</p>
+                </div>
+            </div>        
+        </section>
+        <section class="container-fluid my-5 bg-dark bg-gradient" id="portfolio">
+            <nav class="btn btn-group mx-5 flex-wrap" id="buttons">
+                <button class="btn btn-dark fs-5">Programing</button>
+                <button class="btn btn-dark fs-5" id="mainclick">3D</button>
+                <button class="btn btn-dark fs-5">Design</button>
+            </nav>
+            <div class="d-flex justify-content-center p-1 text-white fs-2 fw-bold border-bottom">Last Projects</div>
+            <div id="hide">
+                <div class="visible d-flex flex-row justify-content-center flex-wrap">
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px">
+                        <span class="text-center">Smaller Nursery Site</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Smaller Site mini.jpg" alt="Smaller" height="100px">
+                        <span><b>Type:</b> Web Aplication</span>
+                        <span ><b>Made with:</b> Angular</span>
+                        <a href="https://smaller-angular-886-0d423c.netlify.app/" class="align-self-end text-secondary" ><b>Access>></b></a> 
+                    </div>
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px">
+                        <span class="text-center">BuyList Purchase List</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Buylist template.jpg" alt="BuyList Application" height="100px">
+                        <span><b>Type:</b> App/Web Aplication</span>
+                        <span ><b>Made with:</b> React.js</span>
+                        <a href="https://buylist-900-001298.netlify.app" class="align-self-end text-secondary" ><b>Access>></b></a> 
+                    </div>
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px">
+                        <span class="text-center">Sky Invaders</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Sky Invaders JPG1.jpg" alt="Sky Invaders" height="100px">
+                        <span><b>Type:</b> Game</span>
+                        <span ><b>Made with:</b> Unity / C#</span>
+                        <a href="https://elton-15.itch.io/sky-invaders" class="align-self-end text-secondary" ><b>Access>></b></a> 
+                    </div>
+                </div>
+                <div class=" d-flex justify-content-center p-4 px-5"><a href="https://github.com/EltonModellingDesign?tab=repositories" class="text-white fs-5">View GitHub Repository</a></div> 
+            </div>
+            <div id="hide">
+                <div class="d-flex flex-row justify-content-center flex-wrap" id="hide">
+                    <div class="d-flex flex-column justify-content-between border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                        <span class="text-center">Vehicles Modeling</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Modelagem de Veiculos/Carro super final.jpg" alt="Chevrolet" height="100px">
+                        <span ><b>Made with:</b> Blender / Substance Painter / Photoshop</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonVehicule">Visualize</span>                 
+                    </div>
+                    <div class="noVisualize" id="slideVehicule">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonVehicule">Back</span>
+                        <figure class="overflow">
+                                <img class="img-overflow" src="https://img2.cgtrader.com/items/2568913/b932619e78/vintage-classic-car-chevrolet-impala-1967-pbr-more-bonus-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Chevrolet 1967">
+                                <img class="img-overflow" src="https://img2.cgtrader.com/items/2568913/4622960e62/vintage-classic-car-chevrolet-impala-1967-pbr-more-bonus-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Chevrolet Indoors">
+                                <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/793/large/elton-alves-carro-00-final-2.jpg?1550958604" alt="Wacky Races 0">
+                                <img class="img-overflow" src="https://img-new.cgtrader.com/items/2755887/b1b996d2d1/race-car-01-stone-car-3d-model-low-poly-max-obj-3ds-fbx-stl-blend.jpg" alt="Wacky Races 1">
+                                <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/810/large/elton-alves-48363510-2600167416690211-6287055664271327232-o.jpg?1550958713" alt="Wacky Races 2">
+                                <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/827/large/elton-alves-48361276-2600167383356881-4004170582399647744-o.jpg?1550958826" alt="Wacky Races 3">
+                                <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/836/large/elton-alves-carro-voador-final-2.jpg?1550958893" alt="Wacky Races 4">
+                                <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/116/845/large/elton-alves-carro-5-final-r.jpg?1550958947" alt="Wacky Races 5">
+                                <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/116/994/large/elton-alves-carro-6-final-r.jpg?1550959817" alt="Wacky Races 6">
+                                <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/001/large/elton-alves-carro-7-final.jpg?1550959878" alt="Wacky Races 7">
+                                <img class="img-overflow" src="https://cdnb.artstation.com/p/assets/images/images/016/117/003/large/elton-alves-carro-a-vapor-final-2.jpg?1550959905" alt="Wacky Races 8">
+                                <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/012/large/elton-alves-carro-veloz-final.jpg?1550959937" alt="Wacky Races 9">
+                                <img class="img-overflow" src="https://cdna.artstation.com/p/assets/images/images/016/117/014/large/elton-alves-carro-madeira-final.jpg?1550959960" alt="Wacky Races 10">
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonVehicule">Back</span>                      
+                    </div>
+                    <div class="d-flex flex-column justify-content-between border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                        <span class="text-center">Cartoon Characters in 3D</span>
+                        <img class="img-fluid" src="https://img2.cgtrader.com/items/2706775/0898bc39a5/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis" height="100px">
+                        <span ><b>Made with:</b> Blender / Substance Painter / Photoshop / Zbrush</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonCharacterC">Visualize</span>                
+                    </div> 
+                    <div class="noVisualize" id="slideCharacterC">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonCharacterC">Back</span>
+                        <figure class="overflow">
+                            <img class="img-overflow" src="https://img-new.cgtrader.com/items/2706775/ed2db48fb6/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/2706775/0898bc39a5/rigged-eva-01-unit-neon-genesis-evangelion-3d-model-low-poly-animated-rigged-max-obj-fbx-stl-blend.jpg" alt="Neon Genesis"> 
+                            <img class="img-overflow" src="https://img-new.cgtrader.com/items/3098347/db6be6e890/alucard-from-hellsing-anime-3d-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Alucard">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/3098347/90261ddcce/alucard-from-hellsing-anime-3d-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Alucard">
+                            <img class="img-overflow" src="https://img1.cgtrader.com/items/3054299/a7f1be3e0e/black-rock-shooter-anime-character-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Black Rock Shooter">
+                            <img class="img-overflow" src="https://img1.cgtrader.com/items/3054299/5088c14658/black-rock-shooter-anime-character-rigged-3d-model-low-poly-animated-rigged-obj-fbx-stl-blend-dae.jpg" alt="Black Rock Shooter">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/3111273/f5bcd5c363/akame-ga-kill-with-basic-rigged-3d-model-low-poly-animated-rigged-max-obj-3ds-fbx-stl-blend.jpg" alt="Akame">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/3111273/8b3b1b3ad0/akame-ga-kill-with-basic-rigged-3d-model-low-poly-animated-rigged-max-obj-3ds-fbx-stl-blend.jpg" alt="Akame">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/3002808/6e8564cfec/painwheel-from-skullgirls-pbr-and-rigged-3d-model-low-poly-rigged-max-obj-fbx-stl-blend.jpg" alt="PainWheel">
+                            <img class="img-overflow" src="https://img2.cgtrader.com/items/3002808/4791036637/painwheel-from-skullgirls-pbr-and-rigged-3d-model-low-poly-rigged-max-obj-fbx-stl-blend-dae.jpg" alt="PainWheel">                                                    
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonCharacterC">Back</span>                      
+                    </div>
+                    <div class="d-flex flex-column justify-content-between border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;" id="carrousel">
+                        <span class="text-center">Animations 3D</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/3D/Animation 3D.jpg" alt="View" height="100px">
+                        <span><b>Made with:</b> Blender | Adobe Premier | Windows Editor</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonAnimation">Visualize</span>                
+                    </div>
+                    <div class="noVisualize" id="slideAnimations">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonAnimation">Back</span>
+                        <figure class="overflow">
+                            <iframe class="videoYou" src="https://www.youtube.com/embed/rUeK6w6wYEY" title="Black Rock Shooter 3D Animation Combo Attack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="videoYou" src="https://www.youtube.com/embed/X7V5DiqXayY" title="SkullGirls PainWhell 3D animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="videoYou" src="https://www.youtube.com/embed/eEP1rII4E-Q" title="Akame Ga Kill 3D Animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="videoYou" src="https://www.youtube.com/embed/TjN5UfMDPPc" title="Hellsing Alucard 3D animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="videoYou" src="https://www.youtube.com/embed/21v7qIDaMik" title="Neon Genesis Evangelion EVA - 01 animations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonAnimation">Back</span>                      
+                    </div> 
+                </div>       
+            </div>
+            <div id="hide">
+                <div class="d-flex flex-row justify-content-center flex-wrap" id="hide"> 
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                        <span class="text-center">Projects de UX Design</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Power Task.png" alt="Web Design Projects" height="100px">
+                        <span ><b>Made with</b> Illustrator</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonUX">Visualize</span>                
+                    </div>
+                    <div class="noVisualize" id="slideUXDesign">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonUX">Back</span>
+                        <figure class="overflow">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/73a96a143702709.627f0649837e6.png" alt="TaskPoint">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/123c98143702709.627f06498103c.png" alt="TaskPoint2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/809408143702709.627f064980881.png" alt="Comments">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/3aa70d143702709.627f064982f8f.png" alt="Comments2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4db189143702709.627f0649820a4.png" alt="Quiz da Fortuna">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d01f74143702709.627f064984070.png" alt="Quiz da Fortuna2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/302e2a143702709.627f064981949.png" alt="Quiz da Fortuna3">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/7cc61e143702709.627f064982722.png" alt="Power Comments">                    
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonUX">Back</span>                      
+                    </div> 
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                        <span class="text-center">Projects of Web Design</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Programação/Coral Viagens.jpg" alt="Web Design Projects" height="100px">
+                        <span ><b>Made with</b> Illustrator</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonWD">Visualize</span>                 
+                    </div>
+                    <div class="noVisualize" id="slideWD">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonWD">Back</span>
+                        <figure class="overflow">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/a11e86143633981.627dcf6b2ff54.jpg" alt="Coral Viagens">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/9bb54f143633981.627dcf6b34513.jpg" alt="Futura Tec">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e1a7a4143633981.627dcf6b3249d.jpg" alt="4Chair">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/51f5cc143633981.627dcf6b2f239.jpg" alt="Tom's Store">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/1831a2143633981.627dcf6b330a2.jpg" alt="Pet Show 1">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d324f5143633981.627dcf6b367ee.jpg" alt="Pet Show 2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8afe69143633981.627dcf6b3183b.jpg" alt="Facul Beer">                    
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonWD">Back</span>                      
+                    </div>
+                    <div class="d-flex flex-column justify-content-center border border-1 rounded-2 m-5 bg-dark text-white" style="width:250px;height:260px;">
+                        <span class="text-center">Design of Brand and Logo</span>
+                        <img class="img-fluid" src="./Conteudo/2.Portfolio/Design/Logo 1080p.jpg" alt="LogoHouse" height="100px">
+                        <span ><b>Made with</b> Illustrator / Blender</span>
+                        <span class="cursor align-self-center text-secondary my-2 text-decoration-underline text-decoration-underline fw-bold" id="buttonLogo">Visualize</span>                
+                    </div>
+                    <div class="noVisualize" id="slideLogo">
+                        <span class="cursor align-self-end text-white m-3 text-decoration-underline fw-bold fs-4" id="buttonLogo">Back</span>
+                        <figure class="overflow">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/48a58f143632263.627dc49783430.jpg" alt="House">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0c179c143632263.627dc49783dcb.jpg" alt="House2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/b514ef143632263.627dc497821cc.jpg" alt="House3">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e84b5b143633119.627dc9fbc3e90.jpg" alt="Smaller">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/edb130143633119.627dc9fbc4a54.png" alt="Smaller2">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/3c0d27143633119.627dc9fbc50d3.jpg" alt="Smaller3">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/2b7d5f101297083.5f1b51f70c958.png" alt="Tom's Store">
+                                <img class="img-overflow" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/b0dd2f101297083.5f1b51f70d324.jpg" alt="Tom's Store2">                    
+                        </figure>  
+                        <span class="cursor align-self-center text-white my-2 text-decoration-underline fw-bold fs-4" id="buttonLogo">Back</span>                      
+                    </div>                              
+                </div>
+            </div>
+            <div class="d-flex justify-content-end p-4 px-5"><a href="./SeçãoProgramação.html" class="text-white fs-4">+Visualize more projects</a></div>
+        </section>
+        <section class="d-flex flex-column justify-content-center align-items-center my-4 mx-md-5 px-md-4" id="Habilidades">
+            <span class="my-3 fw-bolder fs-5">Skills</span>
+            <div class="container border rounded-2 mx-2 bg-light">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr id="hideTable">
+                            <th scope="col" class="text-center"></th>
+                            <th scope="col" class="text-center border-end">Basic</th>
+                            <th scope="col" class="text-center border-end">Intermediary</th>
+                            <th scope="col" class="text-center">Advanced</th>
+                        </tr>                    
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="text-center border-end">JavaScript</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:22%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">C#</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:15%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">CSS</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:58%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">HTML</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:75%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">React</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:8%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Angular</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:15%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Bootstrap</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:30%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Design</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:18%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">3D</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:58%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Animation</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:22%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Inglês</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:57%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center border-end">Espanhol</td>
+                            <td colspan="3" class="container-fluid">
+                                <div class="progress my-2" style="height:10px">
+                                    <div class="progress-bar" style="width:14%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>                
+                </table>
+            </div>
+        </section>
+        <section class="mx-md-5 px-md-4 my-3">
+            <div class="m-2 fs-5"><b>Curses, Degrees e Softwares.</b></div>
+            <div class="mx-md-1 my-3">
+                <span class="d-flex justify-content-center border-bottom m-3">Certificates</span>
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <span class="text-center" style="font-size: 0.8rem;">JavaScript<br>FreeCodeCamp</span>
+                        <img src="./Conteudo/3.Degress/freecodecamp.png" class="rounded-circle" style="background-color: #006400;" alt="FreeCodeCamp" height="90px">
+                        <a href="https://www.freecodecamp.org/certification/Elton_015/javascript-algorithms-and-data-structures?fbclid=IwAR3RNocWHEyC2MuyQEwhurr7SDTChLb6zPySWwWScyoGw5wCGOZqdvWTiPE" style="font-size: 0.8rem;">Visualizar</a>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <span class="text-center" style="font-size: 0.8rem;">Web Design<br>Claro Cursos</span>
+                        <img src="./Conteudo/3.Degress/Claro Cursos.png" class="rounded-circle border" alt="Claro Cursos" height="90px">
+                        <a href="./Conteudo/3.Degress/Claro certificate Web Design.pdf" style="font-size: 0.8rem;">Visualizar</a>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <span class="text-center" style="font-size: 0.8rem;">Graphic Design<br>Claro Cursos</span>
+                        <img src="./Conteudo/3.Degress/Claro Cursos.png" class="rounded-circle border" alt="Claro Cursos" height="90px">
+                        <a href="./Conteudo/3.Degress/Claro Design Grafico Diploma.pdf" style="font-size: 0.8rem;">Visualizar</a>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <span class="text-center" style="font-size: 0.8rem;">Certificados<br>Udemy Cursos</span>
+                        <img src="./Conteudo/3.Degress/Udemy.jpg" class="rounded-circle border" alt="Udemy Cursos" height="90px">
+                        <a href="./Conteudo/3.Degress/Certificados Udemy 07-2022.pdf" style="font-size: 0.8rem;">Visualizar</a>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <span class="text-center" style="font-size: 0.8rem;">Informatica Jr<br>Polly Educacional</span>
+                        <img src="./Conteudo/3.Degress/Polly Icon.JPG" class="rounded-circle border" alt="Polly Cursos" height="90px">
+                        <a href="./Conteudo/3.Degress/Certificado Tecnico de Informatica Polly.pdf" style="font-size: 0.8rem;">Visualizar</a>
+                    </div>             
+                </div>
+            </div>
+            <div class="mx-md-1 py-2">
+                <span class="d-flex justify-content-center border-bottom m-3">Use of Softwares and Platforms</span>
+                <div class="d-flex flex-row flex-wrap justify-content-center">
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Blender.png" alt="Blender" height="70px">
+                        <b style="font-size: 0.8rem;">Blender</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/3DSMax.png" alt="3DS Max" height="70px">
+                        <b style="font-size: 0.8rem;">3DS Max</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Substance Painter.jpg" alt="Substance Painter" height="70px">
+                        <b style="font-size: 0.8rem;">Substance Painter</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/ZBrush.png" alt="Zbrush" height="70px">
+                        <b style="font-size: 0.8rem;">Zbrush</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Photoshop.png" alt="Photoshop" height="70px">
+                        <b style="font-size: 0.8rem;">Photoshop</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Illustrator.jpg" alt="Illustrator" height="70px">
+                        <b style="font-size: 0.8rem;">Illustrator</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Premiere-Pro.png" alt="Illustrator" height="70px">
+                        <b style="font-size: 0.8rem;">Premier</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Visual Studios.png" alt="Visual Studios" height="70px">
+                        <b style="font-size: 0.8rem;">Visual Studios</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Angular.png" alt="Angular" height="70px">
+                        <b style="font-size: 0.8rem;">Angular.js</b>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mx-3 my-2">
+                        <img src="./Conteudo/4.Softwares/Unity.png" alt="Unity" height="70px">
+                        <b style="font-size: 0.8rem;">Unity</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container my-5" id="contato">
+            <div class="my-1 fs-5">Contact</div>
+            <div>
+                <b>email:</b>elton.seuconsultor@gmail.com
+            </div>
+            <div>
+                <img src="./Conteudo/5.Contact/Whatasapp.png" alt="Whatasapp" height="20px">
+                <b>whatsapp:</b>(11)99250-0589
+            </div>
+            <div>
+                <img src="./Conteudo/5.Contact/LinkDin.png" alt="LinkDin" height="20px">
+                <a href="https://www.linkedin.com/in/elton-alves-939426227/" class="text-black"><b>LinkDin</b></a>
+            </div>
+            <div>
+                <img src="./Conteudo/5.Contact/GitHub.jpg" alt="GitHub" height="20px">
+                <a href="https://github.com/EltonModellingDesign" class="text-black"><b>GitHub</b></a>
+            </div>
+            <div>
+                <img src="./Conteudo/5.Contact/facebook.png" alt="Facebook" height="20px">
+                <a href="https://www.facebook.com/elton.forever/" class="text-black"><b>Facebook</b></a>
+            </div>
+            <div>
+                <img src="./Conteudo/5.Contact/Skethfab.png" alt="Sketthfab" height="20px">
+                <a href="https://sketchfab.com/eltonmodellingdesign2020" class="text-black"><b>Sketchfab</b></a>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex justify-content-center flex-wrap text-white bg-dark">
+        <div class="d-flex flex-column align-items-center m-3">
+            <H6>Pages</H6>
+            <ul>
+                <li><a href="#home" class="text-white">Home</a></li>
+                <li><a href="#portfolio" class="text-white">Portfolio</a></li>
+                <li><a href="#Habilidades" class="text-white">Skills</a></li>
+                <li><a href="#contato" class="text-white">Contact</a></li>
+            </ul>                
+        </div>
+        <div class="d-flex flex-column align-items-center m-3">
+            <H6>Informations</H6>
+            <p>
+                Empresa Tom’s Store Solutions<br>
+                MEI: 33.567.594/0001-76<br>
+                City São Paulo/SP<br>
+                Rua Carlos Finlay Cep:03685-060<br>
+            </p>
+        </div>
+        <div class="d-flex flex-column align-items-center m-3">
+            <H6>Support</H6>
+            <p>Whats:<br>(11) 99336-5689</p>
+        </div>
+        <div class="d-flex flex-column align-items-center m-3">
+            <H6>Seeleds</H6>
+            <a href="#"><img src="./Conteudo/6.Footer/site protegido.png" alt="site-protegido" height="50px"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="PortfolioJava.js"></script>
+</body>
+</html>
